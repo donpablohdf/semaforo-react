@@ -107,8 +107,9 @@ const TrafficLight = () => {
 				<li className="list-group-item bg-danger text-center h2">DEPURAR</li>
 				<li className="list-group-item bg-danger ">El semáforo no funciona como debería. Creo que por settimeout</li>
 				<li className="list-group-item bg-danger ">Parar el semáforo no funciona como debería.<br/> He tenido que usar una variable useState para meter el intervalo porque así es como mejor se para. </li>
-				<li className="list-group-item bg-danger ">El borde redondeado de arriba no coge el diámetro que le mando</li>
+				<li className="list-group-item bg-danger ">El borde redondeado de arriba no coge el diámetro que le mando.<br/>Si le pongo rounded-3 redondea las cuatro esquinas.</li>
 				<li className="list-group-item bg-danger ">¿Las variables useState como se pasan de un componete a otro?</li>
+				<li className="list-group-item bg-danger ">No tengo ni idea de para que sirve useEffect o si tenía que usarlo en ésta práctica.</li>
 			</ul>
 		</div>
 		</>
