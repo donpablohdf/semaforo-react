@@ -1,6 +1,6 @@
 
 .contenedorSemaforo{
-    width: 85px;
+    width: 90px;
 }
 .luzRoja{
     color: red;
@@ -13,4 +13,7 @@
 }
 .luzNegra{
     color: black;
+}
+.luzMagenta{
+    color: magenta;
 }
