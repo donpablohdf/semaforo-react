@@ -14,12 +14,13 @@ const TrafficLight = () => {
 	const [Amarilla, setAmarilla] = useState(enNegro);
 	const [Verde, setVerde] = useState(enNegro);
 	//nuevo circulo magenta
-	const [Magenta, setMagenta] = useState(enNegro);
-
+	const [Magenta, setMagenta] = useState(enMagenta);
+	const [creaMG, setMG]= useState(false);
+	//control de semaforo
 	const [ParaSemaforo, setPara]= useState(false);
 	const [IDinterval, setIter] = useState(0);
 	const arrancaSemaforo = () =>{
-		
+		setRoja(enRoja);
 		if(!ParaSemaforo){
 		setIter (setInterval(() => {
 				setRoja(enRoja);
@@ -51,14 +52,15 @@ const TrafficLight = () => {
 	<div className="shadow-lg ">		
 			<div className=" p-3 bg-warning rounded-top"><i className={"fas fa-circle fa-5x " + Roja} onClick={() => Roja == "luzRoja" ? setRoja(enNegro) : setRoja(enRoja)} ></i></div>
 			<div className="p-3 bg-warning"><i className={"fas fa-circle fa-5x " + Amarilla} onClick={() => Amarilla == "luzAmarilla" ? setAmarilla(enNegro) : setAmarilla(enAmarilla)}></i></div>
-			<div className="p-3 bg-warning shadow rounded-bottom"><i className={"fas fa-circle fa-5x " + Verde} onClick={() => Verde == "luzVerde" ? setVerde(enNegro) : setVerde(enVerde)} ></i></div>
+			<div className="p-3 bg-warning shadow"><i className={"fas fa-circle fa-5x " + Verde} onClick={() => Verde == "luzVerde" ? setVerde(enNegro) : setVerde(enVerde)} ></i></div>
+			{ creaMG ? (<div className="p-3 bg-warning shadow"><i className={"fas fa-circle fa-5x " + Magenta} onClick={() => Magenta == "luzMagenta" ? setMagenta(enNegro) : setMagenta(enMagenta)}></i></div>):(<></>)}
 			
 			<div className="row shadow p-1 bg-light mt-2 ">
 				<div className='col p-3'>
 				{ ParaSemaforo ? (<i className="fas fa-stop fa-2x " onClick={() => paraSemaforo()} ></i>):(<i className="fas fa-play fa-2x " onClick={() => arrancaSemaforo()} ></i>)}
 				</div>
 				<div className='col p-3'>
-				<i className="fas fa-plus fa-2x"></i>
+				{ creaMG ? (<i className="fas fa-minus fa-2x" onClick={() => setMG(false)} ></i>):(<i className="fas fa-plus fa-2x" onClick={() => setMG(true)} ></i>)}
 				</div>
 			</div> 
 	</div>
