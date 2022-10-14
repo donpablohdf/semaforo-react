@@ -117,11 +117,24 @@ const TrafficLight = () => {
 					{/* para o arranca el semáforo*/}
 					<div className='col p-3 bg-light d-flex justify-content-start'>
 						{ParaSemaforo ? (<i 
-											className="fas fa-stop fa-2x " onClick={() =>{ pararSemaforo(); setTimeout(() => {todosNegro();}, 200);}}></i>) : (<i className="fas fa-play fa-2x " onClick={() => arrancaSemaforo()}></i>)}
+											className="fas fa-stop fa-2x " 
+											onClick={() =>{ pararSemaforo(); setTimeout(() => {todosNegro();}, 200);}}
+										></i>) 
+									  : (<i 
+											className="fas fa-play fa-2x " 
+											onClick={() => arrancaSemaforo()}
+										></i>)}
 					</div>
 					{/* botón crea y mata magenta */}
 					<div className='col p-3 bg-light d-flex justify-content-end'>					
-						{creaMG ? (<i className="fas fa-minus fa-2x" onClick={() =>{ setMG(false); pararSemaforo();}}></i>) : (<i className="fas fa-plus fa-2x" onClick={() =>{ setMG(true); paraSemaforo();}}></i>)}
+						{creaMG ? (<i 
+									className="fas fa-minus fa-2x" 
+									onClick={() =>{ setMG(false); pararSemaforo();}}
+									></i>) 
+									: (<i 
+										className="fas fa-plus fa-2x" 
+										onClick={() =>{ setMG(true); pararSemaforo();}}
+										></i>)}
 					</div>
 				</div>
 			</div>
