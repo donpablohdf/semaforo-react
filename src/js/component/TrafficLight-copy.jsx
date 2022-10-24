@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import TresColores from './TresColores.jsx'
 const enRoja= "luzRoja"
 const enAmarilla="luzAmarilla"
 const enVerde="luzVerde"
@@ -116,7 +115,6 @@ const TrafficLight = () => {
 <>
 {/* GRUPO SEMÁFORO Y CAJA DE CONTROL */}
 	<div>
-		<TresColores />
 		{/* CAJA DE CONTROL DE SEMÁFORO Y CREACIÓN DE MAGENTA*/}
 			<div>
 				
