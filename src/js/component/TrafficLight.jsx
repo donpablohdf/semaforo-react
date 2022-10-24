@@ -76,6 +76,7 @@ const TrafficLight = () => {
 			setRoja(enRoja);
 		}, 1005);
 	}
+//todos a negro
 	const todosNegro= () =>{
 		setMagenta(enNegro);
 		setRoja(enNegro);
@@ -102,7 +103,11 @@ const TrafficLight = () => {
 		
 		setPara(false);
 		clearInterval(IDintervalo);
-		todosNegro();
+		IDintervalo=false;
+		setTimeout(() => {
+			todosNegro();
+		}, 250);
+		
 		
 	}
 // ************************** J S X ***************************	
@@ -193,8 +198,6 @@ const TrafficLight = () => {
 			<li className="list-group-item bg-danger text-center h2">DEPURAR</li>
 			<li className="list-group-item bg-danger ">Hay que parar el semáforo al pulsar sobre <i className="fas fa-plus"></i> </li>
 			<li className="list-group-item bg-danger ">No se elimina bien el intervalo al pulsar en <i className="fas fa-stop"></i><br/>He usado un settimeout en paraSemaforo</li>
-			
-			<li className="list-group-item bg-danger ">¿Las variables useState como se pasan de un componete a otro?</li>
 		</ul>
 	</div>
 
