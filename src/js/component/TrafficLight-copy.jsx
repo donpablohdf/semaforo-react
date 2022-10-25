@@ -21,86 +21,129 @@ const TrafficLight = () => {
 	//control de semaforo
 	const [ParaSemaforo, setPara]= useState(false);
 	
-// // movimiento de luces
-	
-// 	const cuatroColores = () =>{
-		
-// 		IDintervalo = setInterval(() => {
-// 			setRoja(enRoja);
-// 			setAmarilla(enNegro);
-// 			setVerde(enNegro);
-// 			setMagenta(enNegro);
+// movimiento de luces
+	const tresColores = () =>{
+		IDintervalo = setInterval(() => {
+			setRoja(enRoja);
+			setAmarilla(enNegro);
+			setVerde(enNegro);
 			
-// 			setTimeout(()=>{
-// 				setRoja(enNegro);
-// 				setAmarilla(enAmarilla);
-// 				setVerde(enNegro);
-// 				setMagenta(enNegro);
-// 			}, 333);	
-// 			setTimeout(()=>{
-// 				setRoja(enNegro);
-// 				setAmarilla(enNegro);
-// 				setVerde(enVerde);
-// 				setMagenta(enNegro);
-// 			}, 666);
-// 			setTimeout(()=>{
-// 				setRoja(enNegro);
-// 				setAmarilla(enNegro);
-// 				setVerde(enNegro);
-// 				setMagenta(enMagenta);
-// 			}, 999);
-// 		}, 1332);
-// 		setTimeout(() => {
-// 			setRoja(enRoja);
-// 		}, 1005);
-// 	}
-// //todos a negro
-// 	const todosNegro= () =>{
-// 		setMagenta(enNegro);
-// 		setRoja(enNegro);
-// 		setAmarilla(enNegro);
-// 		setVerde(enNegro);
-// 	}
-
-// //control del semaforo
-// 	const arrancaSemaforo = () =>{
+			setTimeout(()=>{
+				setRoja(enNegro);
+				setAmarilla(enAmarilla);
+				setVerde(enNegro);
+			}, 333);	
+			setTimeout(()=>{
+				setRoja(enNegro);
+				setAmarilla(enNegro);
+				setVerde(enVerde);
+			}, 666);
+		}, 999);
+		setTimeout(() => {
+			setRoja(enRoja);
+		}, 1005);
 		
-// 		if(!ParaSemaforo && !creaMG){ setTimeout(() => {
-// 			tresColores();			
-// 		}, 50); }
+		
 
-// 		if(!ParaSemaforo && creaMG) { setTimeout(() => {
-// 			cuatroColores();			
-// 		}, 50); }
-// 		setPara(true);
-// 		todosNegro();
-// 	}
+	}
+	const cuatroColores = () =>{
+		
+		IDintervalo = setInterval(() => {
+			setRoja(enRoja);
+			setAmarilla(enNegro);
+			setVerde(enNegro);
+			setMagenta(enNegro);
+			
+			setTimeout(()=>{
+				setRoja(enNegro);
+				setAmarilla(enAmarilla);
+				setVerde(enNegro);
+				setMagenta(enNegro);
+			}, 333);	
+			setTimeout(()=>{
+				setRoja(enNegro);
+				setAmarilla(enNegro);
+				setVerde(enVerde);
+				setMagenta(enNegro);
+			}, 666);
+			setTimeout(()=>{
+				setRoja(enNegro);
+				setAmarilla(enNegro);
+				setVerde(enNegro);
+				setMagenta(enMagenta);
+			}, 999);
+		}, 1332);
+		setTimeout(() => {
+			setRoja(enRoja);
+		}, 1005);
+	}
+//todos a negro
+	const todosNegro= () =>{
+		setMagenta(enNegro);
+		setRoja(enNegro);
+		setAmarilla(enNegro);
+		setVerde(enNegro);
+	}
+
+//control del semaforo
+	const arrancaSemaforo = () =>{
+		
+		if(!ParaSemaforo && !creaMG){ setTimeout(() => {
+			tresColores();			
+		}, 50); }
+
+		if(!ParaSemaforo && creaMG) { setTimeout(() => {
+			cuatroColores();			
+		}, 50); }
+		setPara(true);
+		todosNegro();
+	}
 	
 
-// 	const pararSemaforo= () =>{		
+	const pararSemaforo= () =>{		
 		
-// 		setPara(false);
-// 		clearInterval(IDintervalo);
-// 		IDintervalo=false;
-// 		setTimeout(() => {
-// 			todosNegro();
-// 		}, 250);
+		setPara(false);
+		clearInterval(IDintervalo);
+		IDintervalo=false;
+		setTimeout(() => {
+			todosNegro();
+		}, 250);
 		
 		
-// 	}
+	}
 // ************************** J S X ***************************	
 	return (
 <>
 {/* GRUPO SEMÁFORO Y CAJA DE CONTROL */}
 	<div>
-		
+		<TresColores/>
 		{/* CAJA DE CONTROL DE SEMÁFORO Y CREACIÓN DE MAGENTA*/}
 			<div>
 				
 				<div className="row  p-1  mb-2 ">
-					<TresColores />
+					{/* para o arranca el semáforo*/}
+					<div className='col p-3 bg-light d-flex justify-content-start'>
+						{ParaSemaforo ? (<i 
+											className="fas fa-stop fa-2x " 
+											onClick={() =>{ pararSemaforo(); setTimeout(() => {todosNegro();}, 200);}}
+										></i>) 
+									  : (<i 
+											className="fas fa-play fa-2x " 
+											onClick={() => arrancaSemaforo()}
+										></i>)}
+					</div>
+					{/* botón crea y mata magenta */}
+					<div className='col p-3 bg-light d-flex justify-content-end'>					
+						{creaMG ? (<i 
+									className="fas fa-minus fa-2x" 
+									onClick={() =>{ setMG(false); pararSemaforo();}}
+									></i>) 
+									: (<i 
+										className="fas fa-plus fa-2x" 
+										onClick={() =>{ setMG(true); pararSemaforo();}}
+										></i>)}
+					</div>
 				</div>
-				
 			</div>
 
 		{/* SEMAFORO */}
