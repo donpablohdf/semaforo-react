@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CrearMagenta from './CreaMagneta.jsx';
 import TresColores from './TresColores.jsx';
 const enRoja= "luzRoja"
 const enAmarilla="luzAmarilla"
@@ -15,10 +16,10 @@ const TrafficLight = () => {
 	const [Roja, setRoja] = useState(enNegro);
 	const [Amarilla, setAmarilla] = useState(enNegro);
 	const [Verde, setVerde] = useState(enNegro);
-	//nuevo circulo magenta
-	const [Magenta, setMagenta] = useState(enMagenta);
+	// //nuevo circulo magenta
+	// const [Magenta, setMagenta] = useState(enMagenta);
 	const [creaMG, setMG]= useState(false);
-	//control de semaforo
+	// //control de semaforo
 	const [ParaSemaforo, setPara]= useState(false);
 	
 // // movimiento de luces
@@ -99,6 +100,7 @@ const TrafficLight = () => {
 				
 				<div className="row  p-1  mb-2 ">
 					<TresColores />
+					<CrearMagenta />
 				</div>
 				
 			</div>
