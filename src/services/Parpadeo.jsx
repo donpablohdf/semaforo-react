@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState } from 'react'
-import { useInterval } from 'usehooks-ts'
+import { useInterval, useTimeout } from 'usehooks-ts'
 import Lucifer from '../context/Lucifer.js';
 
 export default function Parpadeo() {
@@ -11,6 +11,9 @@ export default function Parpadeo() {
             //     setLuz({...luz, luzRoja: "luzNegra"})
             // }, 1005)
             // },[IdIntervalo])
+            
+               
+            
             useInterval( ()=>{
                 setLuz({...luz, luzRoja: "luzRoja"})
                 setLuz({...luz, luzAmarilla: "luzNegra"})
@@ -29,7 +32,7 @@ export default function Parpadeo() {
                 
 
             },luz.isPlaying ? 1335 : null,)
-            
+        
         break;
         case 4:
             
