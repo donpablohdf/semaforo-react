@@ -4,14 +4,14 @@ const Context = React.createContext({})
 
 export function Lucifer ({children}) {
     const SETTINGS ={ 
-        luzRoja: "luzNegra",
-        luzAmarilla: "luzNegra",
-        luzVerde: "luzNegra",
-        luzMagenta: "luzMagenta",
-        luzNegra: "luzNegra",
+        colores: 3,
         creaMG: false,
         isPlaying: false,
-        colores: 3,
+        luzAmarilla: "luzNegra",
+        luzMagenta: "luzMagenta",
+        luzNegra: "luzNegra",
+        luzRoja: "luzNegra",
+        luzVerde: "luzNegra",
     }
     //let valores = Object.values(SETTINGS); // valores = ["Scott", "Negro", true, 5];
     const [luz, setLuz] = useState(SETTINGS)
