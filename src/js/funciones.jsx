@@ -18,7 +18,8 @@ const [ParaSemaforo, setPara]= useState(false);
 
 // movimiento de luces
 const tresColores = () =>{
-    IDintervalo = setInterval(() => {
+    IDintervalo = 
+    setInterval(() => {
         setRoja(enRoja);
         setAmarilla(enNegro);
         setVerde(enNegro);
@@ -36,7 +37,8 @@ const tresColores = () =>{
     }, 999);
     setTimeout(() => {
         setRoja(enRoja);
-    }, 1005);
+    }, 1005
+    );
     
     
 
