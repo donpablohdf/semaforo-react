@@ -11,7 +11,8 @@ export function Lucifer ({children}) {
         luzNegra: "luzNegra", 
         creaMG: false, 
         paraSemaforo: false, 
-        isPlaying:false
+        isPlaying:false,
+        tresColores:true,
     }
     //let valores = Object.values(SETTINGS); // valores = ["Scott", "Negro", true, 5];
     const [luz, setLuz] = useState(SETTINGS)
