@@ -13,7 +13,7 @@ export function Lucifer ({children}) {
         paraSemaforo: false, 
         isPlaying:false
     }
-    let valores = Object.values(SETTINGS); // valores = ["Scott", "Negro", true, 5];
+    //let valores = Object.values(SETTINGS); // valores = ["Scott", "Negro", true, 5];
     const [luz, setLuz] = useState(SETTINGS)
 
 return <Context.Provider value={{luz, setLuz}}>
