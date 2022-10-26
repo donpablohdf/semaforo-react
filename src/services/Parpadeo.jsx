@@ -12,7 +12,6 @@ export default function Parpadeo() {
             // }, 1005)
             // },[IdIntervalo])
             
-               
             
             useInterval( ()=>{
                 setLuz({...luz, luzRoja: "luzRoja"})
