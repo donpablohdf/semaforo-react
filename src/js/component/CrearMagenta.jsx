@@ -4,7 +4,6 @@ import Lucifer from '../../context/Lucifer.js';
 //const creaMg=false
 export default function CrearMagenta() {
     const {luz, setLuz}  = useContext(Lucifer);
-    setLuz({...luz, isPlaying: false})
 	return (     
         <div className='col p-3 bg-light d-flex justify-content-end'>
     {
