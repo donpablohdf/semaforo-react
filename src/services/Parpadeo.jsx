@@ -6,30 +6,24 @@ export default function Parpadeo() {
     const {luz, setLuz}  = useContext(Lucifer);    
     switch (luz.colores) {
         case 3:
-            // useEffect(()=>{
-            // setTimeout(() => {
-            //     setLuz({...luz, luzRoja: "luzNegra"})
-            // }, 1005)
-            // },[IdIntervalo])
-            
-            
             useInterval( ()=>{
                 setLuz({...luz, luzRoja: "luzRoja"})
                 setLuz({...luz, luzAmarilla: "luzNegra"})
                 setLuz({...luz, luzVerde: "luzNegra"})
-                
-                setTimeout(()=>{
-                    setLuz({...luz, luzRoja: "luzNegra"})
-                    setLuz({...luz, luzAmarilla: "luzAmarilla"})
-                    setLuz({...luz, luzVerde: "luzNegra"})
-                }, 333);	
-                setTimeout(()=>{
-                    setLuz({...luz, luzRoja: "luzNegra"})
-                    setLuz({...luz, luzAmarilla: "luzNegra"})
-                    setLuz({...luz, luzVerde: "luzVerde"})
-                }, 666);
-                
 
+            },luz.isPlaying ? 666 : null,)
+
+            useInterval( ()=>{
+                setLuz({...luz, luzRoja: "luzNegra"})
+                setLuz({...luz, luzAmarilla: "luzAmarilla"})
+                setLuz({...luz, luzVerde: "luzNegra"})
+
+            },luz.isPlaying ? 999 : null,)
+            
+            useInterval( ()=>{
+                setLuz({...luz, luzRoja: "luzNegra"})
+                setLuz({...luz, luzAmarilla: "luzNegra"})
+                setLuz({...luz, luzVerde: "luzVerde"})
             },luz.isPlaying ? 1335 : null,)
         
         break;
