@@ -66,6 +66,7 @@
     "@capacitor/status-bar": "4.0.1",
     "image-loader": "^0.0.1",
     "loader": "^2.1.1",
+    "prettier": "^2.7.1",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
