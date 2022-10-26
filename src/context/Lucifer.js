@@ -4,9 +4,9 @@ const Context = React.createContext({})
 
 export function Lucifer ({children}) {
     const SETTINGS ={ 
-        luzRoja: "luzRoja", 
-        luzAmarilla: "luzAmarilla", 
-        luzVerde: "luzVerde", 
+        luzRoja: "luzNegra", 
+        luzAmarilla: "luzNegra", 
+        luzVerde: "luzNegra", 
         luzMagenta: "luzMagenta", 
         luzNegra: "luzNegra", 
         creaMG: false, 
