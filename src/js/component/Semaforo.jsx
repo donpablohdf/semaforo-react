@@ -4,7 +4,7 @@ import Lucifer from '../../context/Lucifer.js';
 
 export default function Semaforo() {
     const {luz, setLuz}  = useContext(Lucifer);
-
+    
     return (
         <div>
             {/* luz roja */}

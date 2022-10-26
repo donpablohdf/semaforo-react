@@ -1,5 +1,5 @@
 import React, {useContext, useState } from 'react'
-import { useInterval, useTimeout } from 'usehooks-ts'
+import { useInterval } from 'usehooks-ts'
 import Lucifer from '../../../context/Lucifer.js';
 
 export default function Parpadeo(params) {

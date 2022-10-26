@@ -9,4 +9,4 @@ console.clear()
 const rootNode = document.getElementById('app');
 ReactDOM.render(<React.StrictMode>
     <App />
- </React.StrictMode>, rootNode);
+</React.StrictMode>, rootNode);

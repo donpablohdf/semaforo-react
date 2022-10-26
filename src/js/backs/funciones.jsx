@@ -35,10 +35,10 @@ const tresColores = () =>{
             setVerde(enVerde);
         }, 666);
     }, 999);
+    
     setTimeout(() => {
         setRoja(enRoja);
-    }, 1005
-    );
+    }, 1005);
     
     
 

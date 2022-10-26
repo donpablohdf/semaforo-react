@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-import { Lucifer } from '../context/Lucifer.js';
+import { Lucifer } from '../context/Lucifer.js'; //cargamos el contexto donde se manejan las variqables del semaforo
 
 import CrearMagenta from './component/CrearMagenta.jsx';
 import Parpadeo from '../services/Parpadeo.jsx';
@@ -12,21 +12,18 @@ const App = () => {
 	return (
 		<>
 {/* ************GRUPO SEMÁFORO Y CAJA DE CONTROL *********** */}
-		<div>
+		<div className='container-fluid-md'>
 		<Lucifer>	
-		{/* CAJA DE CONTROL DE SEMÁFORO Y CREACIÓN DE MAGENTA*/}
+			{/* CAJA DE CONTROL DE SEMÁFORO Y CREACIÓN DE MAGENTA*/}
 				<div>
 					<div className="row  p-1  mb-2 ">
 					<PlayStop />
-					<Parpadeo tipo= "luzRoja" delay1= {333} delay2= {1332} />
-					<Parpadeo tipo= "luzAmarilla" delay1= {2000} delay2= {3000} />
-					<Parpadeo tipo= "luzVerde" delay1= {4000} delay2= {5000} />
-					<Parpadeo tipo= "luzMagenta" delay1= {1332} delay2= {1665} />
+					<Parpadeo />
 					<CrearMagenta />
 					</div>
 					
 				</div>
-		{/* SEMAFORO */}
+			{/* SEMAFORO */}
 				<div className='bg-success p-3 rounded-pill '>
 					<Semaforo/>
 				</div>
