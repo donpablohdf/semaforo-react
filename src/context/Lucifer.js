@@ -10,7 +10,6 @@ export function Lucifer ({children}) {
         luzMagenta: "luzMagenta", 
         luzNegra: "luzNegra", 
         creaMG: false, 
-        paraSemaforo: false, 
         isPlaying:false,
         colores:3,
     }

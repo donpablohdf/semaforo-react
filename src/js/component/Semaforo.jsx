@@ -30,8 +30,10 @@ export default function Semaforo() {
                 ></i>
             </div>
 
-            {/* crea o mata magenta según el botón */}
+{/* crea o mata magenta según el botón */}
+
             { //si pulsamos el botón  + (de crear magenta) crea el nuevo elemento 
+            
             luz.creaMG ? ( 
                 <div className="row p-3 bg-warning rounded-circle m-2 border border-dark border-2">
                     <i 
@@ -42,7 +44,7 @@ export default function Semaforo() {
                     }>
                     </i>
                 </div>
-            ) 
+            )
             // si pulsamos el botón - (eliminar magenta) crea un fragmento vacío		
             : (<></>)}
         </div>
